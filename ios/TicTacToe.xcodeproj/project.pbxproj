@@ -18,7 +18,9 @@
 		988DE00A0CE645CB9C3D692C /* Dosis-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD7BF33F178C43C9860818D9 /* Dosis-ExtraBold.ttf */; };
 		63B387F38F2B4EE3A6EB2344 /* Dosis-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE8E08BF670C4BBBA45C576F /* Dosis-Medium.ttf */; };
 		1B56F41436AA40CFBCBE2610 /* Dosis-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B2D536D104DC0A5715BAE /* Dosis-Regular.ttf */; };
-		6728A2A2EDA147C8AF2C2DB0 /* fonts.js in Resources */ = {isa = PBXBuildFile; fileRef = 7E22BF5D97A941268A1C46CF /* fonts.js */; };
+		6D743C9231B3426D95E59CE1 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E91C15BE14E40929A7E2076 /* PermanentMarker-Regular.ttf */; };
+		4305938C4A2F49EB8F02DD99 /* RubikBurned-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06DC6E59224343DB854A0E56 /* RubikBurned-Regular.ttf */; };
+		540E7323E4DF41E09075CB50 /* fonts.js in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE65C89617451DBABF03CC /* fonts.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +55,9 @@
 		CD7BF33F178C43C9860818D9 /* Dosis-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Dosis-ExtraBold.ttf"; path = "../src/fonts/Dosis-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AE8E08BF670C4BBBA45C576F /* Dosis-Medium.ttf */ = {isa = PBXFileReference; name = "Dosis-Medium.ttf"; path = "../src/fonts/Dosis-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3C1B2D536D104DC0A5715BAE /* Dosis-Regular.ttf */ = {isa = PBXFileReference; name = "Dosis-Regular.ttf"; path = "../src/fonts/Dosis-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7E22BF5D97A941268A1C46CF /* fonts.js */ = {isa = PBXFileReference; name = "fonts.js"; path = "../src/fonts/fonts.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E91C15BE14E40929A7E2076 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; name = "PermanentMarker-Regular.ttf"; path = "../src/fonts/PermanentMarker-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		06DC6E59224343DB854A0E56 /* RubikBurned-Regular.ttf */ = {isa = PBXFileReference; name = "RubikBurned-Regular.ttf"; path = "../src/fonts/RubikBurned-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3DEE65C89617451DBABF03CC /* fonts.js */ = {isa = PBXFileReference; name = "fonts.js"; path = "../src/fonts/fonts.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +170,9 @@
 				CD7BF33F178C43C9860818D9 /* Dosis-ExtraBold.ttf */,
 				AE8E08BF670C4BBBA45C576F /* Dosis-Medium.ttf */,
 				3C1B2D536D104DC0A5715BAE /* Dosis-Regular.ttf */,
-				7E22BF5D97A941268A1C46CF /* fonts.js */,
+				5E91C15BE14E40929A7E2076 /* PermanentMarker-Regular.ttf */,
+				06DC6E59224343DB854A0E56 /* RubikBurned-Regular.ttf */,
+				3DEE65C89617451DBABF03CC /* fonts.js */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 				988DE00A0CE645CB9C3D692C /* Dosis-ExtraBold.ttf in Resources */,
 				63B387F38F2B4EE3A6EB2344 /* Dosis-Medium.ttf in Resources */,
 				1B56F41436AA40CFBCBE2610 /* Dosis-Regular.ttf in Resources */,
-				6728A2A2EDA147C8AF2C2DB0 /* fonts.js in Resources */,
+				6D743C9231B3426D95E59CE1 /* PermanentMarker-Regular.ttf in Resources */,
+				4305938C4A2F49EB8F02DD99 /* RubikBurned-Regular.ttf in Resources */,
+				540E7323E4DF41E09075CB50 /* fonts.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,10 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import {
   DIMS,
@@ -18,6 +24,8 @@ import {Fonts} from '../../fonts/fonts';
 import {styles} from './styles';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icons from 'react-native-vector-icons/FontAwesome';
+import Bg from '../../components/bg';
+import Btn from '../../components/Btn';
 
 const arr = new Array(9).fill(null);
 const board = new Board();
@@ -102,7 +110,7 @@ const VsComp = () => {
     ) {
       timeout = setTimeout(() => {
         computerMove();
-      }, 400);
+      }, 300);
     }
     return () => timeout && clearTimeout(timeout);
   }, [nextMove, computerMove, players.computer, gameState]);
@@ -125,7 +133,7 @@ const VsComp = () => {
           break;
         case DRAW:
         default:
-          winnerStr = 'DRAW ! \nBetter Luck Next Time !';
+          winnerStr = 'DRAW ! \n \nBetter Luck \n \n Next Time !';
       }
       setGameState(GAME_STATES.over);
       setWinner(winnerStr);
@@ -139,86 +147,70 @@ const VsComp = () => {
     case GAME_STATES.notStarted:
     default:
       return (
-        <LinearGradient
-          colors={[Colors.Dblue, Colors.Lblue]}
-          start={{x: 0, y: 0}}
-          end={{x: 1, y: 0}}
-          style={styles.Board}>
-          <Text style={styles.Title}>-CHOOSE YOUR SIDE-</Text>
-          <TouchableOpacity onPress={() => choosePlayer(PLAYER_X)}>
-            <LinearGradient
-              colors={[Colors.Lblue, Colors.Dblue]}
-              style={styles.btn}>
-              <Text style={styles.player}>X</Text>
-            </LinearGradient>
-          </TouchableOpacity>
-          <Text style={styles.sepertText}>OR</Text>
-          <TouchableOpacity onPress={() => choosePlayer(PLAYER_O)}>
-            <LinearGradient
-              colors={[Colors.Lblue, Colors.Dblue]}
-              style={styles.btn}>
-              <Text style={styles.player}>O</Text>
-            </LinearGradient>
-          </TouchableOpacity>
-        </LinearGradient>
-      );
-    case GAME_STATES.inProgress:
-      return (
-        <LinearGradient
-          colors={[Colors.Dblue, Colors.Lblue]}
-          start={{x: 0, y: 0}}
-          end={{x: 1, y: 0}}
-          style={styles.gridContain}>
+        <Bg>
+          <Text style={styles.Title}>CHOOSE YOUR TEAM</Text>
           <View
             style={{
               width: '100%',
-              height: '30%',
+              alignItems: 'center',
+              marginTop: '60%',
+            }}>
+            <Btn title={'TEAM X'} onPress={() => choosePlayer(PLAYER_X)} />
+            <Btn title={'TEAM O'} onPress={() => choosePlayer(PLAYER_O)} />
+          </View>
+        </Bg>
+      );
+    case GAME_STATES.inProgress:
+      return (
+        <Bg>
+          <View
+            style={{
+              flex: 1,
               margin: 20,
             }}>
             <Text style={styles.Headtxt}>{'First Move \n TEAM X !'} </Text>
             <Text style={styles.Mock}>{'Try your best to WIN ! \n KID !'}</Text>
+
+            <LinearGradient
+              colors={[Colors.Lgreen, Colors.Dgreen]}
+              style={styles.boardContainer}>
+              <View style={styles.line1}></View>
+              <View style={styles.line2}></View>
+              <View style={styles.line3}></View>
+              <View style={styles.line4}></View>
+              {grid.map((value, index) => {
+                const isActive = value !== null;
+                return (
+                  <TouchableOpacity
+                    style={styles.squares}
+                    key={index}
+                    onPress={() => humanMove(index)}>
+                    {isActive && (
+                      <Text style={[styles.Mark]}>
+                        {value === PLAYER_X ? 'X' : 'O'}
+                      </Text>
+                    )}
+                  </TouchableOpacity>
+                );
+              })}
+            </LinearGradient>
           </View>
-          <LinearGradient
-            colors={[Colors.Lblue, Colors.Dblue]}
-            style={styles.boardContainer}>
-            <View style={styles.line1}></View>
-            <View style={styles.line2}></View>
-            <View style={styles.line3}></View>
-            <View style={styles.line4}></View>
-            {grid.map((value, index) => {
-              const isActive = value !== null;
-              return (
-                <TouchableOpacity
-                  style={styles.squares}
-                  key={index}
-                  onPress={() => humanMove(index)}>
-                  {isActive && (
-                    <Text style={styles.Mark}>
-                      {value === PLAYER_X ? 'X' : 'O'}
-                    </Text>
-                  )}
-                </TouchableOpacity>
-              );
-            })}
-          </LinearGradient>
-        </LinearGradient>
+        </Bg>
       );
     case GAME_STATES.over:
       return (
-        <LinearGradient
-          colors={[Colors.Dblue, Colors.Lblue]}
-          start={{x: 0, y: 0}}
-          end={{x: 1, y: 0}}
-          style={styles.Board}>
+        <Bg>
           <Text style={styles.Title}>{winner}</Text>
-          <TouchableOpacity onPress={startNewGame}>
-            <LinearGradient
-              colors={[Colors.Lblue, Colors.Dblue]}
-              style={styles.btn}>
-              <Text style={styles.player}>TRY AGAIN</Text>
-            </LinearGradient>
-          </TouchableOpacity>
-        </LinearGradient>
+          <View
+            style={{
+              width: '100%',
+              height: '36%',
+              alignItems: 'center',
+              marginTop: '40%',
+            }}>
+            <Btn title={'TRY AGAIN'} onPress={startNewGame} />
+          </View>
+        </Bg>
       );
   }
 };

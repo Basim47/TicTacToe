@@ -3,4 +3,6 @@ export const Fonts = {
   med: 'Dosis-Medium',
   bold: 'Dosis-Bold',
   Ebold: 'Dosis-ExtraBold',
+  title: 'RubikBurned-Regular',
+  regular: 'PermanentMarker-Regular',
 };

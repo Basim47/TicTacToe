@@ -5,8 +5,6 @@ export const styles = StyleSheet.create({
   Board: {
     flex: 1,
     backgroundColor: Colors.Dblue,
-    padding: 20,
-    alignItems: 'center',
   },
   player: {
     fontSize: 28,
@@ -15,13 +13,11 @@ export const styles = StyleSheet.create({
     marginVertical: 4,
   },
   Title: {
-    fontFamily: Fonts.bold,
-    fontSize: 30,
+    fontFamily: Fonts.title,
+    fontSize: 26,
     color: Colors.white,
     marginVertical: '26%',
     textAlign: 'center',
-    letterSpacing: 1,
-    lineHeight: 50,
   },
   sepertText: {
     fontSize: 20,
@@ -30,7 +26,7 @@ export const styles = StyleSheet.create({
     marginVertical: '10%',
   },
   btn: {
-    width: 190,
+    width: '80%',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 90,
@@ -97,24 +93,22 @@ export const styles = StyleSheet.create({
   Mark: {
     fontSize: 80,
     alignSelf: 'center',
-    fontFamily: Fonts.bold,
+    fontFamily: Fonts.regular,
     color: Colors.white,
   },
   Headtxt: {
-    fontFamily: Fonts.bold,
-    fontSize: 30,
+    fontFamily: Fonts.title,
+    fontSize: 40,
     textAlign: 'center',
-    lineHeight: 50,
-    letterSpacing: 1,
     color: Colors.white,
     alignSelf: 'center',
   },
   Mock: {
     fontSize: 22,
-    fontFamily: Fonts.bold,
+    fontFamily: Fonts.regular,
     color: Colors.icon2,
     alignSelf: 'center',
     textAlign: 'center',
-    marginTop: '10%',
+    marginVertical: '10%',
   },
 });

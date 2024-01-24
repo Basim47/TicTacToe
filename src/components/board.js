@@ -23,7 +23,7 @@ const Board = ({winner, onSquarePress}) => {
       onSquarePress(winner);
       setSquares(Array(9).fill(null));
     } else if (!newSquares.includes(null)) {
-      onSquarePress('Draw');
+      onSquarePress('None');
       setSquares(Array(9).fill(null));
     }
   };
@@ -54,9 +54,7 @@ const Board = ({winner, onSquarePress}) => {
 
   return (
     <LinearGradient
-      colors={[Colors.Lblue, Colors.Dblue]}
-      start={{x: 0, y: 0}}
-      end={{x: 1, y: 0}}
+      colors={[Colors.Lgreen, Colors.Dgreen]}
       style={styles.Board}>
       <View style={styles.line1}></View>
       <View style={styles.line2}></View>
@@ -78,7 +76,7 @@ export default Board;
 
 const styles = StyleSheet.create({
   Board: {
-    width: '100%',
+    width: '90%',
     height: '50%',
     borderRadius: 20,
     alignSelf: 'center',
@@ -88,6 +86,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: '10%',
   },
   square: {
     display: 'flex',
@@ -100,7 +99,7 @@ const styles = StyleSheet.create({
   squareText: {
     color: '#fff',
     fontSize: 60,
-    fontFamily: Fonts.Ebold,
+    fontFamily: Fonts.regular,
   },
   line1: {
     width: '80%',

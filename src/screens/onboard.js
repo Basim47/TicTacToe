@@ -1,75 +1,74 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  ImageBackground,
+} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Colors} from '../colors/Colors';
 import {Fonts} from '../fonts/fonts';
+import Icon from 'react-native-vector-icons/Entypo';
+import Bg from '../components/bg';
+import Btn from '../components/Btn';
 
 const Onboard = () => {
   const navigation = useNavigation();
   return (
-    <LinearGradient
-      colors={[Colors.Dblue, Colors.Lblue]}
-      start={{x: 0, y: 0}}
-      end={{x: 1, y: 0}}
-      style={styles.Board}>
-      <Text style={styles.Title}>-SELECT MODE-</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Main')}>
-        <LinearGradient
-          colors={[Colors.Lblue, Colors.Dblue]}
-          style={styles.btn}>
-          <Text style={styles.player}>1 V 1</Text>
-        </LinearGradient>
-      </TouchableOpacity>
-      <Text style={styles.sepertText}>OR</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('VsComp')}>
-        <LinearGradient
-          colors={[Colors.Lblue, Colors.Dblue]}
-          style={styles.btn}>
-          <Text style={styles.player}>VS AI</Text>
-        </LinearGradient>
-      </TouchableOpacity>
-    </LinearGradient>
+    <Bg>
+      <Image
+        source={require('../imgs/playstore-icon.png')}
+        style={{
+          width: '35%',
+          height: '18%',
+          borderRadius: 20,
+          alignSelf: 'center',
+          marginTop: '30%',
+        }}
+        resizeMode="contain"
+      />
+      <Text style={styles.Title}>{'TIC  TAC  TOE'}</Text>
+      <View
+        style={{
+          width: '100%',
+          alignItems: 'center',
+          marginTop: '60%',
+        }}>
+        <Btn
+          title={'Vs Ai'}
+          icn={'user'}
+          onPress={() => navigation.navigate('VsComp')}
+        />
+
+        <Btn
+          title={'1 Vs 1'}
+          icn={'users'}
+          onPress={() => navigation.navigate('Main')}
+        />
+        <TouchableOpacity
+          style={{alignSelf: 'center'}}
+          onPress={() => navigation.navigate('About')}>
+          <Text
+            style={{color: Colors.white, fontSize: 14, fontFamily: Fonts.med}}>
+            About !
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </Bg>
   );
 };
 
 export default Onboard;
 
 const styles = StyleSheet.create({
-  Board: {
-    flex: 1,
-    backgroundColor: Colors.Dblue,
-    padding: 20,
-    alignItems: 'center',
-  },
   Title: {
-    fontFamily: Fonts.bold,
-    fontSize: 30,
+    fontFamily: Fonts.title,
+    fontSize: 28,
     color: Colors.white,
-    marginVertical: '26%',
+    marginVertical: '3%',
     textAlign: 'center',
-    letterSpacing: 1,
-    lineHeight: 50,
-  },
-  player: {
-    fontSize: 26,
-    fontFamily: Fonts.Ebold,
-    color: Colors.white,
-    marginVertical: 4,
-  },
-
-  sepertText: {
-    fontSize: 20,
-    fontFamily: Fonts.Ebold,
-    color: Colors.white,
-    marginVertical: '10%',
-  },
-
-  btn: {
-    width: 190,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 90,
-    elevation: 7,
   },
 });

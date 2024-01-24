@@ -19,7 +19,15 @@
     },
     {
       "path": "src/fonts/fonts.js",
-      "sha1": "89b687d2c9a9447d899a2d80ef4b4448846f65d7"
+      "sha1": "7a715da7bdcff49bf1ed6b7e91e32aa62c4a3ab7"
+    },
+    {
+      "path": "src/fonts/PermanentMarker-Regular.ttf",
+      "sha1": "bc40bfbc7eb7715af82b136429848a3c7a83a2b3"
+    },
+    {
+      "path": "src/fonts/RubikBurned-Regular.ttf",
+      "sha1": "546eccbc5a368bd10e6a4fe9570208428c16a036"
     }
   ]
 }

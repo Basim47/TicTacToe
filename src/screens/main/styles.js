@@ -9,14 +9,14 @@ export const styles = StyleSheet.create({
   },
   title: {
     color: Colors.white,
-    fontFamily: Fonts.Ebold,
+    fontFamily: Fonts.title,
     fontSize: 40,
     alignSelf: 'center',
     marginVertical: 30,
   },
   winnerText: {
     fontSize: 30,
-    fontFamily: Fonts.Ebold,
+    fontFamily: Fonts.regular,
     alignSelf: 'center',
     textAlign: 'center',
     color: Colors.white,
@@ -28,8 +28,8 @@ export const styles = StyleSheet.create({
   },
   titledes: {
     color: Colors.white,
-    fontFamily: Fonts.Ebold,
-    fontSize: 26,
+    fontFamily: Fonts.regular,
+    fontSize: 20,
     textAlign: 'center',
     alignSelf: 'center',
     marginVertical: 16,
